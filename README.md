@@ -16,10 +16,10 @@ Sentiment analysis as such can be viewed as just another form of classification,
 
 Wikipedia: "Even though in most statistical classification methods, the neutral class is ignored under the assumption that neutral texts lie near the boundary of the binary classifier, several researchers suggest that, as in every polarity problem, three categories must be identified. Moreover, it can be proven that specific classifiers such as the Max Entropy[9] and SVMs[10] can benefit from the introduction of a neutral class and improve the overall accuracy of the classification."    
 
-Tutorials:
-MEDIUM:
-Sentiment Analysis from Tweets using Recurrent Neural Networks: https://medium.com/@gabriel.mayers/sentiment-analysis-from-tweets-using-recurrent-neural-networks-ebf6c202b9d5
-OTHER:
+Tutorials:<br>
+MEDIUM:<br>
+Sentiment Analysis from Tweets using Recurrent Neural Networks: https://medium.com/@gabriel.mayers/sentiment-analysis-from-tweets-using-recurrent-neural-networks-ebf6c202b9d5 <br>
+OTHER:<br>
 
 ### 2. Data resource
 My resource for this project has been the [Sentiment140 dataset](https://www.kaggle.com/kazanova/sentiment140). It's a corpus of 1.6 million tweets which have been automatically annotated (0 = negative or 4 = positive) through a method described by Go et al. (2019), by which they have specifically searched tweets with emoticons in them and labeled them accordingly. The emoticons themselves have been removed from the version of the corpus used here. 
