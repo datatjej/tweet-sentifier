@@ -38,6 +38,7 @@ The data is a CSV with emoticons removed. Data file format has 6 fields:<br>
 3.1 Train-test-split
 
 3.2 Tokenization
+As discussed by Long (2020) in a Towards data science article, the word_tokenize tokenizer from NLTK is simply too slow when dealing with large amounts of data. Instead I settled for a combination of split() and regular expressions for removing the punctuation. 
 
 3.3 Word embeddings
 
@@ -60,3 +61,4 @@ LSTM?
 
 ### 7. References
 Go, A., Bhayani, R. and Huang, L., 2009. Twitter sentiment classification using distant supervision. CS224N project report, Stanford, 1(12), p.2009.<br>
+Long, A., 2020. Benchmarking Python NLP Tokenizers. *Towards data science*. URL: https://towardsdatascience.com/benchmarking-python-nlp-tokenizers-3ac4735100c5
