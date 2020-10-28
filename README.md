@@ -12,9 +12,12 @@ Final project for Machine Learning (LT2316). Autumn semester of 2020.
 ### 1. Background
 My motivation for doing a sentiment analysis-based project was to familiarize myself with an area of NLP that we haven't really had so much hands-on experience of in the program so far. I also thought it would be interesting and useful to see how one would best go about to extract tweets from Twitter and save them in a data-processing-friendly way. 
 
-Sentiment analysis as such can be viewed as just another form of classification, in its simplest form a binary classification between "positive" and "negative". Twitter is valuable source of data since it covers a broad range of topics and at different levels of formality. It's also very abundant, with 500 million new tweets being sent out every day (internetlivestats.com, 2020).   The sentiments uncovered can for example be used for companies to analyze how people perceive their products or services and overall customer satisfaction. 
+Sentiment analysis as such can be viewed as just another form of classification, in its simplest form a binary classification between "positive" and "negative". Twitter is valuable source of data since it covers a broad range of topics and at different levels of formality. It's also very abundant, with 500 million new tweets being sent out every day (internetlivestats.com, 2020). The sentiments uncovered can for example be used for companies to analyze how people perceive their products or services and overall customer satisfaction. 
 
-Among the first researchers to explore sentiment analysis on Twitter data were Go et al. (2009), who also created the data set used in this project. They introduced the idea of using tweets with emoticons for distant supervised learning.    
+Among the first researchers to explore sentiment analysis on Twitter data were Go et al. (2009), who also created the data set used in this project. They introduced the idea of using tweets with emoticons for *distant supervised learning*, i.e. automatic generation of datasets through already existing labels (e.g. emoticons for polarity in this case). Using Naive Bayes, Maximum Entropy and SVM as classifiers and unigrams as well as bigrams for features, they obtained 80 % accuracy when training on this kind of data.
+
+Pak & Paroubek (2010) collected a corpus of 300,000 tweets following the same method as Go et al. (2009). However, they also added a neutral/objective class by collecting tweets from newspaper accounts, and according to them, the method from Go et al. performed badly when used on these three classes. Training a Naive Bayes model on n-grams and POS tags (unlike Go et al. they find the POS tags useful) yielded good experimental results. 
+     
 
 Tutorials:<br>
 MEDIUM:<br>
@@ -58,13 +61,15 @@ LSTM?
 ### 5. Discussion
 
 5.1 Limitations
+- emoticons are not perfect at defining the correct sentiment of a tweet
+- 
 
 ### 6. Conclusion
 
 ### 7. References
-##Papers:<br>
+## Papers:<br>
 Go, A., Bhayani, R. and Huang, L., 2009. Twitter sentiment classification using distant supervision. CS224N project report, Stanford, 1(12), p.2009.<br>
 
-##Other sources:<br>
+## Other sources:<br>
 Long, A., 2019. Benchmarking Python NLP Tokenizers. Towards data science. URL: https://towardsdatascience.com/benchmarking-python-nlp-tokenizers-3ac4735100c5 (Accessed 24-10-2020)<br>
 Internet live stats, 2020. Twitter Usage Statistics. *internetlivestats.com*. URL: https://www.brandwatch.com/blog/twitter-stats-and-statistics/ (Accessed 28-10-2020)<br>
