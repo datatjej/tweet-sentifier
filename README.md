@@ -17,9 +17,16 @@ Sentiment analysis as such can be viewed as just another form of classification,
 Among the first researchers to explore sentiment analysis on Twitter data were Go et al. (2009), who also created the data set used in this project. They introduced the idea of using tweets with emoticons for *distant supervised learning*, i.e. automatic generation of datasets through already existing labels (e.g. emoticons for polarity in this case). Using Naive Bayes, Maximum Entropy and SVM as classifiers and unigrams as well as bigrams for features, they obtained 80 % accuracy when training on this kind of data.
 
 Pak & Paroubek (2010) collected a corpus of 300,000 tweets following the same method as Go et al. (2009). However, they also added a neutral/objective class by collecting tweets from newspaper accounts, and according to them, the method from Go et al. performed badly when used on these three classes. Training a Naive Bayes model on n-grams and POS tags (unlike Go et al. they find the POS tags useful) yielded good experimental results. 
-     
+ 
+Agarwal et al. (2011) show -- by experimenting with tree kernel and feature-based models -- "[...] that a tree kernel model performs roughly as well as the best feature based models, even though it does not require detailed feature engineering". They use about 12,000 manually annotated tweets from a commercial source, some of them translated from other languages into English via Google Translate. For the feature-based approach, one of the 100 features used consists of looking at the prior polarity scaling of words by refering to the Dictionary of Affect in Language (DAL) and WordNet, which turn out to cover almost 90 % of the words in their training set.   
 
-Tutorials:<br>
+
+
+FUN FACTS:<br>
+- "Surprisingly though, the word *for* appeared as a top feature. A preliminary analysis revealed that the word *for* appears as frequently in positive tweets as it does in negative tweets. However, tweets containing phrases like *for you* and *for me* tend to be positive even in absence of of any other explicit prior polarity words" (Agarwal et al. 2011:36). <br>
+- "Emoticons also appear as important unigrams" (ibid)        
+
+TUTORIALS:<br>
 MEDIUM:<br>
 Sentiment Analysis from Tweets using Recurrent Neural Networks: https://medium.com/@gabriel.mayers/sentiment-analysis-from-tweets-using-recurrent-neural-networks-ebf6c202b9d5 <br>
 OTHER:<br>
@@ -37,7 +44,7 @@ The data is a CSV with emoticons removed. Data file format has 6 fields:<br>
 5 - the text of the tweet (Lyx is cool)<br>
 
 Wikipedia: "Even though in most statistical classification methods, the neutral class is ignored under the assumption that neutral texts lie near the boundary of the binary classifier, several researchers suggest that, as in every polarity problem, three categories must be identified. Moreover, it can be proven that specific classifiers such as the Max Entropy[9] and SVMs[10] can benefit from the introduction of a neutral class and improve the overall accuracy of the classification."    
-
+ 
 ### 3. Methods
 
 3.1 Train-test-split
@@ -61,7 +68,8 @@ LSTM?
 ### 5. Discussion
 
 5.1 Limitations
-- emoticons are not perfect at defining the correct sentiment of a tweet
+- emoticons are **not perfect** at defining the correct sentiment of a tweet
+- the data used for training and testing is collected by search queries and therefore **biased** (Agarwal et al. 2011)
 - 
 
 ### 6. Conclusion
