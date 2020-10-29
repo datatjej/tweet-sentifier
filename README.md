@@ -18,9 +18,13 @@ Among the first researchers to explore sentiment analysis on Twitter data were G
 
 Pak & Paroubek (2010) collected a corpus of 300,000 tweets following the same method as Go et al. (2009). However, they also added a neutral/objective class by collecting tweets from newspaper accounts, and according to them, the method from Go et al. performed badly when used on these three classes. Training a Naive Bayes model on n-grams and POS tags (unlike Go et al. they find the POS tags useful) yielded good experimental results. 
  
-Agarwal et al. (2011) show -- by experimenting with tree kernel and feature-based models -- "[...] that a tree kernel model performs roughly as well as the best feature based models, even though it does not require detailed feature engineering". They use about 12,000 manually annotated tweets from a commercial source, some of them translated from other languages into English via Google Translate. For the feature-based approach, one of the 100 features used consists of looking at the prior polarity scaling of words by refering to the Dictionary of Affect in Language (DAL) and WordNet, which turn out to cover almost 90 % of the words in their training set.   
+Agarwal et al. (2011) show -- by experimenting with tree kernel and feature-based models -- *"[...] that a tree kernel model performs roughly as well as the best feature based models, even though it does not require detailed feature engineering"*. They use about 12,000 manually annotated tweets from a commercial source, some of them translated from other languages into English via Google Translate. For the feature-based approach, one of the 100 features used consists of looking at the prior polarity scaling of words by refering to the Dictionary of Affect in Language (DAL) and WordNet, which turn out to cover almost 90 % of the words in their training set. They achieve an avg. accuracy of up to 75 % for 2-way classification, and 61 % for 3-way classification.
 
+Mohammad et al. (2013) also used sentiment lexicon features along with ngrams to create state-of-the-art SVM classifiers for sentiment detection in tweets. [UUMMM....]
 
+[INSERT PROBLEMS WITH LEXICON-BASED UNSUPERVISED SENTIMENT ANALYSIS]
+
+In 2014, the first paper to use word embeddings for sentiment analysis on Twitter data was published. Tang et al. (2014:1) introduced a special method for creating word embeddings for tweets, arguing that existing word embedding learning algorithms like word2vec aren't suitable for capturing sentiment: *"These methods typically only  model the  context  information of words so that they cannot distinguish words with similar context but opposite sentiment polarity (e.g. good and bad)."* They incorporated sentiments into the embeddings by  mapping  each  n-gram to the sentiment polarity of the sentences in 10 million automcatically collected and annotated tweets. When applying their embeddings to a binary classification task, they achieve around the same accuracy as hand-crafted SOTA models (~ 85 %), which increases to 86.58% when combined with existing feature sets. 
 
 FUN FACTS:<br>
 - "Surprisingly though, the word *for* appeared as a top feature. A preliminary analysis revealed that the word *for* appears as frequently in positive tweets as it does in negative tweets. However, tweets containing phrases like *for you* and *for me* tend to be positive even in absence of of any other explicit prior polarity words" (Agarwal et al. 2011:36). <br>
@@ -76,7 +80,10 @@ LSTM?
 
 ### 7. References
 ## Papers:<br>
-Go, A., Bhayani, R. and Huang, L., 2009. Twitter sentiment classification using distant supervision. CS224N project report, Stanford, 1(12), p.2009.<br>
+- Agarwal, A., Xie, B., Vovsha, I., Rambow, O. and Passonneau, R., 2019. Sentiment analysis of twitter data, 2014. URL http://www. cs. columbia. edu/~ julia/papers/Agarwaletal11. pdf.
+- Go, A., Bhayani, R. and Huang, L., 2009. Twitter sentiment classification using distant supervision. CS224N project report, Stanford, 1(12), p.2009.
+- Pak, A. and Paroubek, P., 2010, May. Twitter as a corpus for sentiment analysis and opinion mining. In LREc (Vol. 10, No. 2010, pp. 1320-1326).
+- Tang, D. & Wei, F. & Yang, N. & Zhou, M. & Liu, T. & Qin, B., 2014. Learning Sentiment-Specific Word Embedding for Twitter Sentiment Classification. 52nd Annual Meeting of the Association for Computational Linguistics, ACL 2014 - Proceedings of the Conference. 1. 1555-1565. 10.3115/v1/P14-1146
 
 ## Other sources:<br>
 Long, A., 2019. Benchmarking Python NLP Tokenizers. Towards data science. URL: https://towardsdatascience.com/benchmarking-python-nlp-tokenizers-3ac4735100c5 (Accessed 24-10-2020)<br>
