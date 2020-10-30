@@ -24,7 +24,7 @@ Mohammad et al. (2013) also used sentiment lexicon features along with ngrams to
 
 [INSERT PROBLEMS WITH LEXICON-BASED UNSUPERVISED SENTIMENT ANALYSIS]
 
-In 2014, the first paper to use word embeddings for sentiment analysis on Twitter data was published. Tang et al. (2014:1) introduced a special method for creating word embeddings for tweets, arguing that existing word embedding learning algorithms like word2vec aren't suitable for capturing sentiment: *"These methods typically only  model the  context  information of words so that they cannot distinguish words with similar context but opposite sentiment polarity (e.g. good and bad)."* They incorporated sentiments into the embeddings by  mapping  each  n-gram to the sentiment polarity of the sentences in 10 million automcatically collected and annotated tweets. When applying their embeddings to a binary classification task, they achieve around the same accuracy as hand-crafted SOTA models (~ 85 %), which increases to 86.58% when combined with existing feature sets. 
+In 2014, the first paper to use word embeddings for sentiment analysis on Twitter data was published. Tang et al. (2014:1) introduced a special method for creating word embeddings for tweets, arguing that existing word embedding learning algorithms like word2vec aren't suitable for capturing sentiment: *"These methods typically only  model the  context  information of words so that they cannot distinguish words with similar context but opposite sentiment polarity (e.g. good and bad)."* They incorporated sentiments into the embeddings by  mapping  each  n-gram to the sentiment polarity of the sentences in 10 million automcatically collected and annotated tweets. When applying their embeddings to a binary classification task, they achieve around the same accuracy as hand-crafted SOTA models (~ 85 %), which increases to 86.58% when combined with existing hand-crafted feature sets. 
 
 FUN FACTS:<br>
 - "Surprisingly though, the word *for* appeared as a top feature. A preliminary analysis revealed that the word *for* appears as frequently in positive tweets as it does in negative tweets. However, tweets containing phrases like *for you* and *for me* tend to be positive even in absence of of any other explicit prior polarity words" (Agarwal et al. 2011:36). <br>
@@ -33,7 +33,15 @@ FUN FACTS:<br>
 TUTORIALS:<br>
 MEDIUM:<br>
 Sentiment Analysis from Tweets using Recurrent Neural Networks: https://medium.com/@gabriel.mayers/sentiment-analysis-from-tweets-using-recurrent-neural-networks-ebf6c202b9d5 <br>
+TOWARDS DATA SCIENCE:<br>
+This is how Twitter Sees The World, Sentiment Analysis Part 1: https://towardsdatascience.com/the-real-world-as-seen-on-twitter-sentiment-analysis-part-one-5ac2d06b63fb
+Another Twitter sentiment analysis with Python — Part 1: https://towardsdatascience.com/another-twitter-sentiment-analysis-bb5b01ebad90 <br>
+Creating The Twitter Sentiment Analysis Program in Python with Naive Bayes Classification: https://towardsdatascience.com/creating-the-twitter-sentiment-analysis-program-in-python-with-naive-bayes-classification-672e5589a7ed <br>
+Twitter Sentiment Analysis Using NLTK, Python: https://towardsdatascience.com/twitter-sentiment-analysis-classification-using-nltk-python-fa912578614c
 OTHER:<br>
+Bulding A Twitter Sentiment Analysis in Python: https://www.pluralsight.com/guides/building-a-twitter-sentiment-analysis-in-python <br>
+Pre-trained Word Embeddings or Embedding Layer? — A Dilemma: https://towardsdatascience.com/pre-trained-word-embeddings-or-embedding-layer-a-dilemma-8406959fd76c
+
 
 ### 2. Data resource
 My resource for this project has been the [Sentiment140 dataset](https://www.kaggle.com/kazanova/sentiment140). It's a corpus of 1.6 million tweets which have been automatically annotated (0 = negative or 4 = positive) through a method described by Go et al. (2019), by which they have specifically searched tweets with emoticons in them and labeled them accordingly. The emoticons themselves have been removed from the version of the corpus used here. 
